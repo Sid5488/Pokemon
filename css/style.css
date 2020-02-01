@@ -1,0 +1,493 @@
+/* PADRONIZAÇÃO DO SITE */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: arial;
+}
+
+.conteudo {
+    width: 1200px;
+    min-height: 837px;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-image: url(../img/pokemonBackground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: #ba222e;
+}
+
+/* ESTILIZAÇÃO DO SITE */
+
+#caixa_pesquisa {
+    width: 260px;
+    height: 50px;
+    margin-top: 5px;
+    background-color: #ba222e;
+    border-radius: 15px;
+}
+
+#pesquisa {
+    height: 20px;
+    border: 0.5px solid white;
+    border-radius: 5px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+#btnBotao {
+    width: 50px;
+    height: 19px;
+    border-radius: 5px;
+    border: 0px solid;
+    background-color: white;
+}
+
+#mostrar_pokemon {
+    width: 100%;
+    min-height: 500px;
+    max-height: auto;
+    overflow: hidden;
+    margin-top: 15px;
+    padding-top: 50px;
+}
+
+/* ANIMAÇÕES EM CSS */
+
+@keyframes cardMon {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes menuMove {
+    from {
+        transform: translateX(-65px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.pokemons {
+    float: left;
+    width: 250px;
+    height: 350px;
+    animation-name: cardMon;
+    -moz-animation-delay: 250ms;
+    animation-duration: 0.9s;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+}
+
+.name {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+.rodape {
+    width: 100%;
+    height: 100px;
+    background-color: #ba222e;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+.img_poke {
+    width: 200px;
+    height: 200px;
+}
+
+.tipo {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 5px;
+    border: 0.5px solid #ba222e;
+    border-radius: 4px;
+    padding-left: 2px;
+    padding-top: 2px;
+    box-sizing: border-box;;
+}
+
+.tipo2 {
+    float: left;
+    width: 130px;
+    height: 30px;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 5px;
+    padding-left: 1px;
+    padding-top: 2px;
+    box-sizing: border-box;
+}
+
+.div_mais {
+    float: left;
+    width: 60px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.btnMais {
+    width: 50px;
+    height: 20px;
+    border: 1px solid #ba222e;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 155px;
+}
+
+.mais_inf {
+    float: left;
+    width: 0px;
+    height: 0px;
+    margin-top: -334px;
+    margin-left: -171px;
+    background-color: #ba222e;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 15px;
+    transition: 0.5s;
+    color: white;
+}
+
+.btnMais:hover .mais_inf {
+    width: 250px;
+    height: 350px;
+    margin-top: -334px;
+    margin-left: -171px;
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+    position: absolute;
+}
+
+/* ESTILIZAÇÃO DO MENU */
+
+.menu {
+    width: 1200px;
+    height: 70px;
+    z-index: 4;
+    position: fixed;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.iconi {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../icon/menu.png);
+}
+
+.btnMenu {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+    border-radius: 15px;
+    background-color: #ba222e;
+}
+
+.categorias {
+    width: 250px;
+    min-height: 50px;
+    max-height: auto;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 53.5px;
+    transition: 0.5s;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 2px 20px 30px #00000055;
+}
+
+.menu_item {
+    width: 250px;
+    height: 50px;
+    color: #ba222e;
+    padding-left: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-size: 22px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* SUBMENU ITENS */
+
+.sub_menu {
+    width: 300px;
+    height: 150px;
+    margin-top: -30px;
+    margin-left: 233px;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    background-color: white;
+}
+
+.menu_item:hover .sub_menu {
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+    animation-name: cardMon;
+}
+
+.btnMenu:hover .categorias {
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+    position: absolute;
+    animation-name: cardMon;
+    animation-duration: 0.5s;
+}
+
+/* ANIMAÇÃO DO FORMULÁRIO */
+
+.form_no-no {
+    animation: move_no-no 500ms forwards;
+}
+
+@keyframes move_no-no {
+    0% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+/* ESTILIZAÇÃO DAS INDORMAÇÕES ADICIONAIS */
+
+/* ESTILIZAÇÃO DO CARD */
+
+.titulo_poke {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+
+.habilidade {
+    width: 210px;
+    height: 25px;
+    margin-top: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: solid 1px white;
+}
+
+.mostrar_hab {
+    width: 210px;
+    min-height: 20px;
+    max-height: auto;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+    margin-top: 5px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* ESTILIZAÇÃO DA TABELA MOVIMENTOS */
+
+.movimentos {
+    width: 210px;
+    height: 25px;
+    margin-top: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: solid 1px white;
+}
+
+.mostrar_mov {
+    width: 210px;
+    min-height: 20px;
+    max-height: auto;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+    margin-top: 5px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* DOCUMENTAÇÃO */
+
+.doc {
+    width: 1200px;
+    min-height: 600px;
+    max-height: auto;
+    background-color: white;
+    margin-top: 70px;
+    border-radius: 15px;
+}
+
+.titulo_doc {
+    width: 1200px;
+    height: 70px;
+    background-color: white;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+    color: #ba222e;
+    border-radius: 15px;
+    border-bottom: solid 1px #ba222e;
+}
+
+/* CONTEUDO DA DOCUMENTAÇÃO */
+
+.conteudo_doc {
+    width: 100%;
+    min-height: 530px;
+    max-height: auto;
+    margin-bottom: 20px;
+}
+
+.url_utilizada {
+    width: 1000px;
+    height: 150px;
+}
+
+.titulo_api {
+    width: 1000px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    color: #ba222e;
+}
+
+.explicacao {
+    width: 1000px;
+    height: 150px;
+    margin-top: 15px;
+    border-top: solid 1px gray;
+    padding-top: 15px;
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* SOLUÇÕES DE PROBLEMAS */
+
+.problemas {
+    width: 1000px;
+    height: 120px;
+}
+
+.titulo_problema {
+    width: 100%;
+    height: 50px;
+    color: #ba222e;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: solid 1px gray;
+}
+
+.poss_problem {
+    width: auto;
+    height: auto;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.solucao {
+    width: 100%;
+    height: 150px;
+    margin-top: 50px;
+}
+
+.titulo_solucao {
+    width: 100%;
+    height: 50px;
+    color: #ba222e;
+    text-align: center;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    border-bottom: solid 1px gray;
+}
+
+.poss_solucao {
+    width: auto;
+    height: auto;
+    margin-left: 50px;
+}
+
+/* BOTÃO DE ATULIZAR */
+
+#atualizar {
+    float: left;
+    width: 70px;
+    height: 25px;
+    margin-left: 50px;
+    margin-top: 15px;
+    border: solid 0.5px gray;
+    background-color: white;
+    border-radius: 5px;
+}
